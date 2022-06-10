@@ -1,0 +1,18 @@
+.loginForm {
+  width: 100%;
+  max-width: 416px;
+  padding: 30px 48px 37px 48px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  position: relative;
+}
+
+.label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #292a2a;
+}

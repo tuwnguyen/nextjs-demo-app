@@ -14,3 +14,12 @@ a {
 * {
   box-sizing: border-box;
 }
+.square {
+  border-radius: 0px;
+}
+
+.jumbotron {
+  padding: 10px;
+  background-image: linear-gradient(to right, #007bff, #000);
+  color: #fff;
+}

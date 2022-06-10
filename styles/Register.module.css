@@ -1,0 +1,50 @@
+.registerForm {
+    width: 100%;
+    max-width: 416px;
+    padding: 30px 48px 37px 48px;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    position: relative;
+    margin: auto;
+  }
+
+.label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1890ff;
+  }
+
+  .SubmitButton {
+    height: 48px;
+    width: 100%;
+    border-radius: 8px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    background-image: linear-gradient(to right, #007bff, rgba(0, 0, 0, 0.481));;
+  }
+  .errorMessage {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ff4d4d;
+    white-space: pre-wrap;
+  }
+  .link {
+    color: #1890ff
+  }
+.inputField {
+  border: none;
+  border-bottom: solid;
+  border-radius: 0;
+  border-width: thin;
+  border-bottom-style: groove;
+}
