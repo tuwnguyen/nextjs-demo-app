@@ -22,11 +22,6 @@ const TopNav = () => {
   useEffect(() => {
     setCurrent(router.pathname);
   }, [router.pathname]);
-  const toggleTheme = () => {
-    dataAppContext.theme == "light"
-      ? setDataAppContext({ ...dataAppContext, theme: "dark" })
-      : setDataAppContext({ ...dataAppContext, theme: "light" });
-  };
   const handleLogout = () => {
     setDataAppContext({ ...dataAppContext, user: null });
     window.location.replace("/signout");
@@ -82,10 +77,6 @@ const TopNav = () => {
           title={user?.email!}
           icon={<CoffeeOutlined />}
         >
-          <Item onClick={toggleTheme} icon={<CodepenOutlined />}>
-            <i className="fa-solid fa-sun-bright"></i>
-            {dataAppContext.theme === "light" ? "Dark" : "Light"}
-          </Item>
           <Item onClick={handleLogout} icon={<LogoutOutlined />}>
             Logout
           </Item>
