@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 
 export interface AppContextDataProps {
-  user: null;
+  user: {
+    username: string;
+    email: string;
+  } | null;
   theme: string;
 }
 
