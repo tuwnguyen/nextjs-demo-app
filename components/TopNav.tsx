@@ -6,7 +6,7 @@ import {
   UserAddOutlined,
   LogoutOutlined,
   CoffeeOutlined,
-  CodepenOutlined,
+  MenuUnfoldOutlined,
 } from "@ant-design/icons";
 import { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
@@ -23,8 +23,8 @@ const TopNav = () => {
     setCurrent(router.pathname);
   }, [router.pathname]);
   const handleLogout = () => {
-    setDataAppContext({ ...dataAppContext, user: null });
     window.location.replace("/signout");
+    setDataAppContext({ ...dataAppContext, user: null });
   };
 
   return (
@@ -38,15 +38,7 @@ const TopNav = () => {
           <a>Home</a>
         </Link>
       </Item>
-      <Item
-        key="/dashboard"
-        onClick={(e: any) => setCurrent(e.key)}
-        icon={<AppstoreOutlined />}
-      >
-        <Link href="/dashboard">
-          <a>Dashboard</a>
-        </Link>
-      </Item>
+
       {user === null && (
         <>
           <Item
@@ -70,17 +62,28 @@ const TopNav = () => {
         </>
       )}
       {user !== null && (
-        <SubMenu
-          key="sub"
-          style={{ float: "right" }}
-          className="float-right"
-          title={user?.email!}
-          icon={<CoffeeOutlined />}
-        >
-          <Item onClick={handleLogout} icon={<LogoutOutlined />}>
-            Logout
+        <>
+          <Item
+            key="/demotodos"
+            onClick={(e: any) => setCurrent(e.key)}
+            icon={<MenuUnfoldOutlined />}
+          >
+            <Link href="/note">
+              <a>Demo todos</a>
+            </Link>
           </Item>
-        </SubMenu>
+          <SubMenu
+            key="sub"
+            style={{ float: "right" }}
+            className="float-right"
+            title={user?.email!}
+            icon={<CoffeeOutlined />}
+          >
+            <Item onClick={handleLogout} icon={<LogoutOutlined />}>
+              Logout
+            </Item>
+          </SubMenu>
+        </>
       )}
     </Menu>
   );

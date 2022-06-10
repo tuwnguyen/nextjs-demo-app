@@ -21,9 +21,9 @@ const Register = () => {
   const router = useRouter();
   const [loading, setLoading] = useState<boolean>(false);
   const [data, setData] = useState<RegisterData>({
-    username: "huy",
-    email: "huy@gmail.com",
-    password: "123123123",
+    username: "",
+    email: "",
+    password: "",
   });
 
   const handleChangeData = (e: any) => {
